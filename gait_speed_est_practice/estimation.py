@@ -13,8 +13,11 @@ from utils import buffer_data
 # The number of IMU (It can only 1, 2, 4)
 num_IMU = 2
 
+Gyro = True  
+Acc = False
+
 # Define ML model parameter
-input_size = num_IMU*6
+input_size = num_IMU*(Gyro+Acc)*3
 hidden_size = 128
 num_layers = 3
 output_size = 1
